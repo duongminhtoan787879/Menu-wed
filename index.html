@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu-container">
+    <h1 class="menu-title">THE MENU</h1>
+
+    <!-- Món chính -->
+    <section class="menu-section">
+      <h2>Hình ảnh-----------Món chính------Giá </h2>
+      <ul>
+        <li>
+          <img src="images/ga_kho.jpg" alt="Gà kho" style="width:100px; margin-right:100px;">
+          <span>Gà kho</span><span>30,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Gà kho"></label>
+        </li>
+        <li>
+          <img src="images/ga_nuong.jpg" alt="Gà nướng" style="width:100px; margin-right:100px;">
+          <span>Gà nướng</span><span>25,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Gà nướng"></label>
+        </li>
+        <li>
+          <img src="images/ga_chien.jpg" alt="Gà chiên" style="width:100px; margin-right:100px;">
+          <span>Gà chiên</span><span>35,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Gà chiên"></label>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Món phụ -->
+    <section class="menu-section">
+      <h2>Hình ảnh-----------Món phụ------Giá</h2>
+      <ul>
+        <li>
+          <img src="images/kim_chi.jpg" alt="Kim chi" style="width:100px; margin-right:100px;">
+          <span>Kim chi</span><span>15,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Kim chi"></label>
+        </li>
+        <li>
+          <img src="images/com_trang.jpg" alt="Cơm trắng" style="width:100px; margin-right:100px;">
+          <span>Cơm trắng</span><span>20,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Cơm trắng"></label>
+        </li>
+        <li>
+          <img src="images/rau.jpg" alt="Rau" style="width:100px; margin-right:100px;">
+          <span>Rau</span><span>10,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Rau"></label>
+        </li> 
+      </ul>
+    </section>
+
+    <!-- Nước uống -->
+    <section class="menu-section">
+      <h2>Hình ảnh-----------Nước uống------Giá</h2>
+      <ul>
+        <li>
+          <img src="images/coca.jpg" alt="Coca Cola" style="width:100px; margin-right:100px;">
+          <span><strong>Coca Cola</strong></span>
+          <span>15,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Coca Cola"></label>
+        </li>
+        <li>
+          <img src="images/sting.jpg" alt="Sting" style="width:100px; margin-right:100px;">
+          <span>Sting</span><span>25,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Sting"></label>
+        </li>
+        <li>
+          <img src="images/nuoc_cam.jpg" alt="Nước cam" style="width:100px; margin-right:100px;">
+          <span>Nước cam</span><span>10,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Nước cam"></label>
+        </li>
+        <li>
+          <img src="images/nuoc_loc.jpg" alt="Nước lọc" style="width:100px; margin-right:100px;">
+          <span>Nước lọc</span><span>15,000đ</span>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Nước lọc"></label>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Chọn bàn -->
+    <div style="margin-bottom: 20px; text-align:center;">
+      <label for="chonBan"><strong>Chọn bàn:</strong></label>
+      <select id="chonBan" style="font-size: 16px; padding: 5px;">
+        <option value="">-- Chọn bàn --</option>
+        <option value="1">Bàn 1</option>
+        <option value="2">Bàn 2</option>
+        <option value="3">Bàn 3</option>
+        <option value="4">Bàn 4</option>
+        <option value="5">Bàn 5</option>
+        <option value="6">Bàn 6</option>
+        <option value="7">Bàn 7</option>
+        <option value="8">Bàn 8</option>
+        <option value="9">Bàn 9</option>
+        <option value="10">Bàn 10</option>
+      </select>
+    </div>
+
+    <!-- Nút gọi món -->
+    <div style="margin-top: 20px; text-align:center;">
+      <button onclick="goiMon()" style="padding:10px 20px; font-size:16px;">Gọi món</button>
+      <h2 id="ketQua" style="color:green; margin-top:10px;"></h2>
+    </div>
+
+  </div>
+
+  <script>
+    function goiMon() {
+      const chonBan = document.getElementById('chonBan').value;
+      const ketQua = document.getElementById('ketQua');
+
+      if (chonBan === "") {
+        ketQua.style.color = "red";
+        ketQua.innerText = "Vui lòng chọn bàn trước khi gọi món!";
+        return;
+      }
+
+      const inputs = document.querySelectorAll('input[type="number"]');
+      let tongMon = 0;
+      let chiTietMon = [];
+
+      inputs.forEach(input => {
+        const soLuong = parseInt(input.value);
+        const tenMon = input.dataset.ten;
+
+        if (!isNaN(soLuong) && soLuong > 0) {
+          tongMon += soLuong;
+          chiTietMon.push(`${tenMon}: ${soLuong}`);
+        }
+      });
+
+      if (tongMon > 0) {
+        ketQua.style.color = "green";
+        ketQua.innerHTML = `Đã gọi món cho <strong>Bàn ${chonBan}</strong><br>` +
+          `Tổng số lượng món: <strong>${tongMon}</strong><br>Chi tiết:<br>` +
+          chiTietMon.map(m => `- ${m}`).join('<br>');
+      } else {
+        ketQua.style.color = "red";
+        ketQua.innerText = "Bạn chưa chọn món nào!";
+      }
+    }
+  </script>
+</body>
+</html>
