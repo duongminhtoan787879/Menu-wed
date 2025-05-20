@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Firebase App (core SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <!-- Firebase Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 </head>
 <body>
   <div class="menu-container">
     <h1 class="menu-title">THE MENU</h1>
+
+    <!-- (Phần menu như bạn đã cho, giữ nguyên) -->
 
     <!-- Món chính -->
     <section class="menu-section">
       <h2>Hình ảnh-----------Món chính------Giá </h2>
       <ul>
         <li>
-          <img src="images/ga_kho.jpg" alt="Gà kho" style="width:100px; margin-right:100px;">
+          <img src="images/ga_kho.jpg" alt="Gà kho" style="width:100px; margin-right:100px;" />
           <span>Gà kho</span><span>30,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Gà kho"></label>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Gà kho" /></label>
         </li>
         <li>
-          <img src="images/ga_nuong.jpg" alt="Gà nướng" style="width:100px; margin-right:100px;">
+          <img src="images/ga_nuong.jpg" alt="Gà nướng" style="width:100px; margin-right:100px;" />
           <span>Gà nướng</span><span>25,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Gà nướng"></label>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Gà nướng" /></label>
         </li>
         <li>
-          <img src="images/ga_chien.jpg" alt="Gà chiên" style="width:100px; margin-right:100px;">
+          <img src="images/ga_chien.jpg" alt="Gà chiên" style="width:100px; margin-right:100px;" />
           <span>Gà chiên</span><span>35,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Gà chiên"></label>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Gà chiên" /></label>
         </li>
       </ul>
     </section>
@@ -37,20 +44,20 @@
       <h2>Hình ảnh-----------Món phụ------Giá</h2>
       <ul>
         <li>
-          <img src="images/kim_chi.jpg" alt="Kim chi" style="width:100px; margin-right:100px;">
+          <img src="images/kim_chi.jpg" alt="Kim chi" style="width:100px; margin-right:100px;" />
           <span>Kim chi</span><span>15,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Kim chi"></label>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Kim chi" /></label>
         </li>
         <li>
-          <img src="images/com_trang.jpg" alt="Cơm trắng" style="width:100px; margin-right:100px;">
+          <img src="images/com_trang.jpg" alt="Cơm trắng" style="width:100px; margin-right:100px;" />
           <span>Cơm trắng</span><span>20,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Cơm trắng"></label>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Cơm trắng" /></label>
         </li>
         <li>
-          <img src="images/rau.jpg" alt="Rau" style="width:100px; margin-right:100px;">
+          <img src="images/rau.jpg" alt="Rau" style="width:100px; margin-right:100px;" />
           <span>Rau</span><span>10,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Rau"></label>
-        </li> 
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Rau" /></label>
+        </li>
       </ul>
     </section>
 
@@ -59,25 +66,25 @@
       <h2>Hình ảnh-----------Nước uống------Giá</h2>
       <ul>
         <li>
-          <img src="images/coca.jpg" alt="Coca Cola" style="width:100px; margin-right:100px;">
+          <img src="images/coca.jpg" alt="Coca Cola" style="width:100px; margin-right:100px;" />
           <span><strong>Coca Cola</strong></span>
           <span>15,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Coca Cola"></label>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Coca Cola" /></label>
         </li>
         <li>
-          <img src="images/sting.jpg" alt="Sting" style="width:100px; margin-right:100px;">
+          <img src="images/sting.jpg" alt="Sting" style="width:100px; margin-right:100px;" />
           <span>Sting</span><span>25,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Sting"></label>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Sting" /></label>
         </li>
         <li>
-          <img src="images/nuoc_cam.jpg" alt="Nước cam" style="width:100px; margin-right:100px;">
+          <img src="images/nuoc_cam.jpg" alt="Nước cam" style="width:100px; margin-right:100px;" />
           <span>Nước cam</span><span>10,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Nước cam"></label>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Nước cam" /></label>
         </li>
         <li>
-          <img src="images/nuoc_loc.jpg" alt="Nước lọc" style="width:100px; margin-right:100px;">
+          <img src="images/nuoc_loc.jpg" alt="Nước lọc" style="width:100px; margin-right:100px;" />
           <span>Nước lọc</span><span>15,000đ</span>
-          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Nước lọc"></label>
+          <label>Số lượng: <input type="number" min="0" value="0" style="width:50px;" data-ten="Nước lọc" /></label>
         </li>
       </ul>
     </section>
@@ -105,13 +112,24 @@
       <button onclick="goiMon()" style="padding:10px 20px; font-size:16px;">Gọi món</button>
       <h2 id="ketQua" style="color:green; margin-top:10px;"></h2>
     </div>
-
   </div>
 
   <script>
+    // TODO: Thay bằng cấu hình Firebase của bạn
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      // ... các trường khác nếu có
+    };
+
+    // Khởi tạo Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
     function goiMon() {
-      const chonBan = document.getElementById('chonBan').value;
-      const ketQua = document.getElementById('ketQua');
+      const chonBan = document.getElementById("chonBan").value;
+      const ketQua = document.getElementById("ketQua");
 
       if (chonBan === "") {
         ketQua.style.color = "red";
@@ -123,21 +141,39 @@
       let tongMon = 0;
       let chiTietMon = [];
 
-      inputs.forEach(input => {
+      inputs.forEach((input) => {
         const soLuong = parseInt(input.value);
         const tenMon = input.dataset.ten;
 
         if (!isNaN(soLuong) && soLuong > 0) {
           tongMon += soLuong;
-          chiTietMon.push(`${tenMon}: ${soLuong}`);
+          chiTietMon.push({ tenMon: tenMon, soLuong: soLuong });
         }
       });
 
       if (tongMon > 0) {
-        ketQua.style.color = "green";
-        ketQua.innerHTML = `Đã gọi món cho <strong>Bàn ${chonBan}</strong><br>` +
-          `Tổng số lượng món: <strong>${tongMon}</strong><br>Chi tiết:<br>` +
-          chiTietMon.map(m => `- ${m}`).join('<br>');
+        // Đẩy dữ liệu lên Firestore
+        db.collection("donhang")
+          .add({
+            ban: chonBan,
+            tongSoMon: tongMon,
+            chiTietMon: chiTietMon,
+            thoiGian: firebase.firestore.FieldValue.serverTimestamp(),
+          })
+          .then(() => {
+            ketQua.style.color = "green";
+            ketQua.innerHTML =
+              `Đã gọi món cho <strong>Bàn ${chonBan}</strong><br>` +
+              `Tổng số lượng món: <strong>${tongMon}</strong><br>Chi tiết:<br>` +
+              chiTietMon
+                .map((m) => `- ${m.tenMon}: ${m.soLuong}`)
+                .join("<br>");
+            // Có thể reset form hoặc giữ nguyên theo ý bạn
+          })
+          .catch((error) => {
+            ketQua.style.color = "red";
+            ketQua.innerText = "Lỗi khi gọi món: " + error.message;
+          });
       } else {
         ketQua.style.color = "red";
         ketQua.innerText = "Bạn chưa chọn món nào!";
