@@ -1,0 +1,51 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border: 2px solid #444;
+  border-radius: 10px;
+}
+
+.menu-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #f4c542;
+  letter-spacing: 2px;
+}
+
+.menu-section {
+  margin-bottom: 30px;
+}
+
+.menu-section h2 {
+  border-bottom: 2px solid #f4c542;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  color: #f4c542;
+}
+
+.menu-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-section li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #555;
+}
+
+.menu-section li span:last-child {
+  color: #ccc;
+}

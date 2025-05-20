@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  <style>
+    body {
+      background-color: #88aadd;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    #signInBtn {
+      background-color: #007bff;
+    }
+
+    #signUpBtn {
+      background-color: #28a745;
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .link a {
+      color: #007bff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Đăng nhập -->
+    <div id="loginForm">
+      <h2>Đăng nhập</h2>
+      <input type="email" id="email_field" placeholder="Email" required />
+      <input type="password" id="password_field" placeholder="Mật khẩu" required />
+      <button id="signInBtn">Đăng nhập</button>
+      <div class="link">
+        <a href="#">Quên mật khẩu?</a>
+      </div>
+      <button id="showSignUpBtn" style="background-color: #28a745;">Tạo tài khoản mới</button>
+    </div>
+
+    <!-- Đăng ký -->
+    <div id="signupForm" class="hidden">
+      <h2>Đăng ký</h2>
+      <input type="email" id="rEmail" placeholder="Email" required />
+      <input type="password" id="rpassword" placeholder="Mật khẩu" required />
+      <input type="password" id="cpassword" placeholder="Xác nhận mật khẩu" required />
+      <button id="signUpBtn">Đăng ký</button>
+      <button id="showLoginBtn" style="background-color: #6c757d;">Quay lại đăng nhập</button>
+    </div>
+  </div>
+
+  <script type="module" src="Auth.js"></script>
+
+  <script>
+    // Giao diện chuyển đổi form
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+
+    document.getElementById('showSignUpBtn').addEventListener('click', () => {
+      loginForm.classList.add('hidden');
+      signupForm.classList.remove('hidden');
+    });
+
+    document.getElementById('showLoginBtn').addEventListener('click', () => {
+      signupForm.classList.add('hidden');
+      loginForm.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
